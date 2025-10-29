@@ -204,4 +204,4 @@ http://127.0.0.1:8000/
 
 
 
-✅ Shu README fayl bilan loyiha **to‘liq tushuntirilgan, ishlash bo‘yicha ko‘rsatmalar, project structure va screenshots** bilan.  
+Shu README fayl bilan loyiha **to‘liq tushuntirilgan, ishlash bo‘yicha ko‘rsatmalar, project structure va screenshots** bilan.  
