@@ -2,7 +2,6 @@
 
 ---
 
-## English Version
 
 ### Project Description
 The **Online Student Attendance Management System** is a web-based application designed to automate the tracking and management of student attendance in educational institutions.  
