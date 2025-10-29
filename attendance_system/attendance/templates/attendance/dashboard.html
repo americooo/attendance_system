@@ -1,0 +1,43 @@
+{% extends 'attendance/base.html' %}
+
+{% block content %}
+<div class="container mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-6 text-center">📊 Student Attendance Dashboard</h1>
+
+  <div class="flex justify-end mb-4">
+    <a href="{% url 'mark_attendance' %}" 
+       class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+       ➕ Mark Attendance
+    </a>
+    <a href="{% url 'report' %}" 
+       class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 ml-2 transition">
+       📈 View Report
+    </a>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white rounded-lg shadow">
+      <thead>
+        <tr class="bg-gray-800 text-white">
+          <th class="py-3 px-4 text-left">Roll No</th>
+          <th class="py-3 px-4 text-left">Name</th>
+          <th class="py-3 px-4 text-left">Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr class="border-b hover:bg-gray-50">
+          <td class="py-3 px-4">{{ student.roll_number }}</td>
+          <td class="py-3 px-4">{{ student.user.username }}</td>
+          <td class="py-3 px-4">{{ student.department }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="3" class="text-center py-4 text-gray-500">No students found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
